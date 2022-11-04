@@ -1,36 +1,34 @@
-﻿// ConsoleApplication2.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+﻿// ConsoleApplication5.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
 
 #include <iostream>
 using namespace std;
 int main()
 {
-    //Zadanie 1
-    int x, y, z, s;
-    cout << "Wpisz cene produktu ";
-    cin >> x;
-    cout << "Wpisz cene sprzedazy ";
-    cin >> y;
-    z = y - x;
-    s = x - y;
-    if (z > 0) {
+   
+	int i;
+	
+	for (i = 0;i<=50; i += 2) 
+	{
+		cout << i << ", ";
+	}
+	
+	while (i <= 100)
+	{
+		cout << i << ", ";
+		i = i + 2;
+	}
+	
+		
 
-        cout << "Zysk wynosi: " << z;
 
-    }
 
-    else if (z < 0) {
 
-        cout << "Strata wynosi: " << s;
-    }
 
 
 
 
 }
-
-
-
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
 // Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie

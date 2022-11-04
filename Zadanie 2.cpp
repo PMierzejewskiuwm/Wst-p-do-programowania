@@ -1,33 +1,35 @@
-﻿// ConsoleApplication3.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+﻿// ConsoleApplication6.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
 
 #include <iostream>
 using namespace std;
 int main()
 {
-    int r;
-    cout << "Wprowadz rok aby sprawdzic czy jest on przestepny ";
-    cin >> r;
+	int n, i, w = 1;
 
-    if (r % 4 == 0) {
+	cout << "Podaj liczbe ";
+	cin >> n;
+	
+		if (n < 0)
+		{
+			cout << "Blad";
+		}
+	
 
-        cout << "Wprowadzony rok jest przestepny ";
- 
-    }
-    else if(r % 100 == 0) {
+		else {
 
-        cout << "Wprowadzony rok nie jest przestepny ";
-    }
+			for (i = 1; i <= n; i++) {
 
-    else if(r % 400 == 0) {
+				w = w *= i;
+			}
 
-        cout << "Wprowadzony rok jest przestepny ";
-    }
+			cout << "Wynik silni podanej liczby to: " << w;
+		}
+	
 
-    else {
 
-        cout << "Wprowadzony rok nie jest przestepny ";
-    }
+
+
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
