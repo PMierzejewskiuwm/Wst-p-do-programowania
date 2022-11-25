@@ -1,0 +1,136 @@
+Zadanie 1
+
+int zad1(int myNum[], int size) {
+
+    int suma = 0;
+    for (int i = 0; i < size; i++) {
+
+        suma += myNum[i];
+    }
+    return suma;
+}
+
+   
+int main()
+    
+{
+    int tablica[20], size, result;
+    size = sizeof(tablica) / sizeof(int);
+        srand(time(NULL));
+    for (int i = 0; i < size; i++) {
+
+        tablica[i] = rand() % 101;
+        cout << tablica[i] << endl;
+    }
+    result = zad1(tablica,size);
+    cout << result << endl;
+}
+
+Zadanie 2
+
+int zad2(int myNum[], int size) {
+
+    int counter = 0;
+    for (int i = 0; i < size; i++) {
+
+        if (myNum[i] % 2 == 0)
+            counter++;
+    }
+    return counter;
+}
+
+
+int main()
+
+{
+    int tablica[20], size, result;
+    size = sizeof(tablica) / sizeof(int);
+    srand(time(NULL));
+    for (int i = 0; i < size; i++) {
+
+        tablica[i] = rand() % 101;
+        cout << tablica[i] << endl;
+    }
+    result = zad2(tablica, size);
+    cout << result << endl;
+}
+
+Zadanie 3
+
+int zad3(int myNum[], int size) {
+
+    int najwieksza = 0, newValue = 0;
+    
+    for (int i = 0; i < size; i++) {
+        newValue = myNum[i];
+
+        if (newValue > najwieksza ) {
+
+            
+            najwieksza = newValue;
+            
+        }
+        
+    }
+    return najwieksza;
+}
+
+
+int main()
+
+{
+    int tablica[20], size, result;
+    size = sizeof(tablica) / sizeof(int);
+    srand(time(NULL));
+    for (int i = 0; i < size; i++) {
+
+        tablica[i] = rand() % 101;
+        cout << tablica[i] << endl;
+    }
+    result = zad3(tablica, size);
+    cout << result << endl;
+}
+
+Zadanie 4
+
+void zad4(int tab1[], int tab2[], int tab3[]) {
+
+    for (int i = 0; i < 20; i++) {
+
+        if (tab1[i] == tab2[i] or tab3[i] == tab2[i]) {
+
+            cout << i << " ";
+        }
+
+    }
+    
+}
+
+
+int main()
+
+{
+    int tablica1[20];
+    int tablica2[20];
+    int tablica3[20];
+    
+    
+    srand(time(NULL));
+    for (int i = 0; i < 20; i++) {
+        tablica1[i] = rand() % 4;
+        cout << tablica1[i] << " ";
+    }
+    cout << endl;
+    for (int i = 0; i < 20; i++) {
+        tablica2[i] = rand() % 4;
+        cout << tablica2[i] << " " ;
+    }
+    cout << endl;
+    for (int i = 0; i < 20; i++) {
+        tablica3[i] = rand() % 4;
+        cout << tablica3[i] << " ";
+      }
+
+    cout << endl;
+    zad4(tablica1, tablica2, tablica3);
+}
