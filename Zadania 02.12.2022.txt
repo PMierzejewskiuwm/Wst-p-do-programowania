@@ -1,0 +1,256 @@
+a) void zad4a(int tab1[], int tab2[], int tab3[]) {
+
+    for (int i = 0; i < 20; i++) {
+
+        if (tab1[i] == tab2[i] or tab3[i] == tab2[i]) {
+
+            cout << i << " ";
+        }
+
+    }
+    
+}
+
+
+int main()
+
+{
+    int tablica1[20];
+    int tablica2[20];
+    int tablica3[20];
+    
+    
+    srand(time(NULL));
+    for (int i = 0; i < 20; i++) {
+        tablica1[i] = rand() % 4;
+        cout << tablica1[i] << " ";
+    }
+    cout << endl;
+    for (int i = 0; i < 20; i++) {
+        tablica2[i] = rand() % 4;
+        cout << tablica2[i] << " " ;
+    }
+    cout << endl;
+    for (int i = 0; i < 20; i++) {
+        tablica3[i] = rand() % 4;
+        cout << tablica3[i] << " ";
+      }
+
+    cout << endl;
+    zad4a(tablica1, tablica2, tablica3);
+}
+
+b)using namespace std;
+void zad4b(int tab1[], int tab2[], int tab3[]) {
+
+    for (int i = 0; i < 20; i++) {
+
+        if (tab1[i] == tab2[i] and tab1[i] == tab3[i]) {
+
+            cout << i << " ";
+        }
+
+    }
+
+}
+
+
+int main()
+
+{
+    int tablica1[20];
+    int tablica2[20];
+    int tablica3[20];
+
+
+    srand(time(NULL));
+    for (int i = 0; i < 20; i++) {
+        tablica1[i] = rand() % 4;
+        cout << tablica1[i] << " ";
+    }
+    cout << endl;
+    for (int i = 0; i < 20; i++) {
+        tablica2[i] = rand() % 4;
+        cout << tablica2[i] << " ";
+    }
+    cout << endl;
+    for (int i = 0; i < 20; i++) {
+        tablica3[i] = rand() % 4;
+        cout << tablica3[i] << " ";
+    }
+
+    cout << endl;
+    zad4b(tablica1, tablica2, tablica3);
+}
+c)using namespace std;
+void zad4c(int tab1[], int tab2[], int tab3[]) {
+
+    for (int i = 0; i < 20; i++) {
+
+        if (tab1[i] != tab2[i] and tab1[i] != tab3[i]) {
+
+            cout << i << " ";
+        }
+
+    }
+
+}
+
+
+int main()
+
+{
+    int tablica1[20];
+    int tablica2[20];
+    int tablica3[20];
+
+
+    srand(time(NULL));
+    for (int i = 0; i < 20; i++) {
+        tablica1[i] = rand() % 4;
+        cout << tablica1[i] << " ";
+    }
+    cout << endl;
+    for (int i = 0; i < 20; i++) {
+        tablica2[i] = rand() % 4;
+        cout << tablica2[i] << " ";
+    }
+    cout << endl;
+    for (int i = 0; i < 20; i++) {
+        tablica3[i] = rand() % 4;
+        cout << tablica3[i] << " ";
+    }
+
+    cout << endl;
+    zad4c(tablica1, tablica2, tablica3);
+}
+
+Zadanie 5
+a)
+int zad5a(string a) {
+
+    int counter=0;
+    for (int i = 0; i < a.size(); i++) {
+
+        if (a[i] >= 'a' and a[i] <= 'z')
+            counter++;
+    }
+    return counter;
+}
+    
+
+
+int main()
+
+{
+
+    string a;
+    cout << "Plese enter some text " << endl;
+    cin >> a;
+    cout << zad5a(a);
+
+
+}
+
+Zadania przed kolokwium
+Zadanie 1.
+int secondToMax(int tab1[]) {
+    
+    int sendToMax = 0;
+    int Max = 0;
+    Max = tab1[0];
+    for (int i = 0; i < 20; i++)
+    {
+        if (tab1[i] > Max)
+        {
+            sendToMax = Max;
+            Max = tab1[i];
+        }
+        else if (tab1[i] > sendToMax and tab1[i] < Max)
+        {
+            sendToMax = tab1[i];
+        }
+    }
+    return sendToMax;
+}
+    
+
+    
+
+
+int main()
+
+{
+    int tab1[20];
+    srand(time(NULL));
+    for (int i = 0; i < 20; i++) {
+
+        tab1[i] = rand() % 101;
+        cout << tab1[i] << " ";
+    }
+    
+    cout << endl;
+    cout << secondToMax(tab1);
+
+}
+Zadanie 2.
+string reversedText(string a) {
+    int b = a.length();
+    string c;
+    c = a;
+    for (int i = 0; i < b; i++) {
+        
+        c[i] = a[b-i-1];
+    }
+    return c;
+}
+
+    
+
+    
+
+
+int main()
+
+{
+    string a;
+    cout << "Enter some text " << endl;
+    cin >> a;
+    cout << reversedText(a);
+
+}
+
+Zadanie 4.
+void randomNumbers() {
+    int count5 = 0, count1 = 0,result = 0;
+    srand(time(NULL));
+    while (count5 < 3 or count1 < 2) {
+
+        result = rand() % 11 - 5;
+        if (result == 1) {
+            count1++;
+            cout << result << " ";
+        }
+        if (result == 5) {
+
+            count5++;
+            cout << result << " ";
+        }
+    }
+
+
+}
+    
+
+    
+
+
+int main()
+
+{
+    
+    randomNumbers();
+
+
+
+}
